@@ -175,4 +175,11 @@ Every credential send uses a fresh ECDH key exchange, providing forward secrecy.
 
 ## License
 
-GPLv3. See [LICENSE](LICENSE) for details.
+Dual licensed:
+
+- **Open source**: GPLv3 for personal use, education, and open source projects.
+- **Commercial**: Paid license available for proprietary/closed-source use.
+
+The name "WouPass" and associated branding are trademarks and cannot be used in derivative works without permission. Forks must use a different name.
+
+See [LICENSE](LICENSE) for full details.
