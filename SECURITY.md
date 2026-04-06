@@ -6,7 +6,7 @@ If you find a security vulnerability in WouPass, please report it responsibly.
 
 **Do not open a public GitHub issue for security vulnerabilities.**
 
-Instead, email: [your-email@example.com]
+Instead, contact via GitHub: https://github.com/edinsonjohender
 
 Include:
 - Description of the vulnerability
