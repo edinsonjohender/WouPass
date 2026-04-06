@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      width: 300px;
+      font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+      background: #171717;
+      color: #EDEDED;
+      font-size: 13px;
+    }
+
+    .header {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 16px;
+      border-bottom: 1px solid #2A2A2A;
+    }
+    .header svg { color: #3ECF8E; }
+    .header-title { font-size: 14px; font-weight: 600; }
+
+    .content { padding: 16px; }
+
+    .status {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px;
+      background: #1C1C1C;
+      border: 1px solid #2A2A2A;
+      border-radius: 12px;
+      margin-bottom: 12px;
+    }
+    .status-dot {
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: #3ECF8E;
+      box-shadow: 0 0 4px #3ECF8E66;
+    }
+    .status-text { font-size: 12px; color: #A1A1A1; }
+
+    .fill-btn {
+      width: 100%;
+      padding: 12px;
+      background: #3ECF8E;
+      color: #0D0D0D;
+      border: none;
+      border-radius: 12px;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      font-family: inherit;
+      transition: all .15s;
+      margin-bottom: 8px;
+    }
+    .fill-btn:hover { background: #5EDBA5; }
+    .fill-btn:disabled { opacity: .4; cursor: not-allowed; }
+
+    .result {
+      padding: 12px;
+      background: #1C1C1C;
+      border: 1px solid #2A2A2A;
+      border-radius: 12px;
+      margin-bottom: 12px;
+      display: none;
+    }
+    .result.show { display: block; }
+    .result-title { font-size: 12px; font-weight: 600; color: #EDEDED; margin-bottom: 4px; }
+    .result-field { font-size: 11px; color: #A1A1A1; margin-bottom: 2px; }
+    .result-success { font-size: 11px; color: #3ECF8E; margin-top: 6px; }
+    .result-error { font-size: 11px; color: #EF4444; margin-top: 6px; }
+
+    .hint {
+      font-size: 10px;
+      color: #666;
+      text-align: center;
+      padding-top: 4px;
+    }
+
+    .footer {
+      padding: 10px 16px;
+      border-top: 1px solid #2A2A2A;
+      text-align: center;
+      font-size: 10px;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#3ECF8E" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+    </svg>
+    <span class="header-title">WouPass</span>
+  </div>
+
+  <div class="content">
+    <div class="status">
+      <div class="status-dot"></div>
+      <span class="status-text">Ready to fill</span>
+    </div>
+
+    <div class="result" id="result">
+      <div class="result-title" id="result-title"></div>
+      <div class="result-field" id="result-user"></div>
+      <div class="result-success" id="result-msg"></div>
+    </div>
+
+    <button class="fill-btn" id="fill-btn">Fill from clipboard</button>
+
+    <p class="hint">Send a password from your phone first, then click fill.</p>
+  </div>
+
+  <div class="footer">
+    Zero-knowledge · No data stored
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

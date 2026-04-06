@@ -1,0 +1,26 @@
+# Flutter
+apps/mobile/build/
+apps/mobile/.dart_tool/
+apps/mobile/.flutter-plugins
+apps/mobile/.flutter-plugins-dependencies
+apps/mobile/.packages
+apps/mobile/pubspec.lock
+
+# Tauri
+apps/desktop/src-tauri/target/
+apps/desktop/node_modules/
+apps/desktop/build/
+apps/desktop/.svelte-kit/
+apps/desktop/package-lock.json
+
+# IDE
+.idea/
+.vscode/
+*.iml
+.DS_Store
+Thumbs.db
+
+# Secrets
+*.env
+*.keystore
+*.jks

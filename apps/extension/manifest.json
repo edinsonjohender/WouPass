@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "WouPass",
+  "version": "1.0.0",
+  "description": "Auto-fill passwords sent from your WouPass mobile app",
+  "permissions": ["activeTab", "clipboardRead"],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "css": ["content.css"]
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+/* Subtle highlight on filled fields */
+input.woupass-filled {
+  box-shadow: 0 0 0 2px #3ECF8E33 !important;
+  transition: box-shadow 0.3s ease;
+}
